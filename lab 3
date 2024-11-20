@@ -1,0 +1,26 @@
+# Please write your code here for Prime numbers lab problem.
+count = 0
+
+while True:
+  num = int(input("Enter a number: "))
+  count += 1
+
+#for i in range(0,num):
+  #print(i)
+
+  prime_num = True
+  if num < 2:
+    prime_num = False
+  else:
+    for i in range(2, num):
+      if num % i ==0:
+        prime_num = False
+        print("Sorry, that's not a prime number.", i, "is a factor of", num, ".", sep="")
+        break
+    if prime_num == True:
+      print("Congratulations!", num, "is a prime number.")
+      break
+if count == 1:
+  print("It took you", count," guess to find a prime.")
+else:
+  print("It took you", count, "guesses to find a prime.")
